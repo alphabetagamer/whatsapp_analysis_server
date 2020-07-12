@@ -176,7 +176,7 @@ def recieve():
         return "Error Wrong file format",500
 @app.route('/',methods=['GET'])
 def wrongway():
-    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:"+os.environ.get('PORT', 5000)+"/data with your file in forma-data with key='input'",200
+    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE whatsapp-analyze.herokuapp.com/data with your file in forma-data with key='input'",200
 
 if __name__ == '__main__':
     #heroku doesnt allow binding of ports it ppicks it automatically from the env and sets it
