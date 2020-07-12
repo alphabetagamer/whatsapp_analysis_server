@@ -157,6 +157,7 @@ def clean(data_super):
     for chat in range(0,len(data_super)):
         temp=data_super[chat]['text']
         temp="".join([i if i.isalnum() or i==" " else " " for i in temp ]).strip()
+        temp=" ".join([i if len(i)>1 else "" for i in temp.split()])
         temp=re.sub("(\s+)"," ",temp).strip()
         temp=[i.lower() for i in temp.split() if i.lower() not in stopwords]
         data_super[chat]["text_clean"]=" ".join(list(dict.fromkeys(temp)))
