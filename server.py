@@ -1,4 +1,3 @@
-import pandas as pd
 import re
 from emoji import UNICODE_EMOJI
 import emoji
@@ -164,6 +163,9 @@ def recieve():
             return "Error in this vast file",500
     else:
         return "Error Wrong file format",500
+@app.route('/data',methods=['GET'])
+def recieve():
+    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:5000/data with your file in forma-data with key input",200
 
 if __name__ == '__main__':
     app.run()
