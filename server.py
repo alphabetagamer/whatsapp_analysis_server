@@ -153,12 +153,22 @@ def collect_full(data_super):
 def recieve():
     if(secure_filename(request.files['input'].filename).split(".")[-1] in ["txt"]):
         try:
+            app.logger.info("recieved file")
+            print("recieved file")
             file_re = request.files['input']
             data = file_re.readlines()
             data=[i.decode("utf-8") for i in data]
+            app.logger.info("file formated to array")
+            print("file formated to array")
             data_super= preprocess(data)
+            print("file passed preprocess")
+            app.logger.info("file passed preprocess")
             data_super= clean(data_super)
+            app.logger.info("file passed clean")
+            print("file passed clean")
             final_res= collect_full(data_super)
+            print("result sent")
+            app.logger.info("result sent")
             return final_res,200
         except:
             return "Error in this vast file",500
@@ -166,7 +176,7 @@ def recieve():
         return "Error Wrong file format",500
 @app.route('/',methods=['GET'])
 def wrongway():
-    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:5000/data with your file in forma-data with key='input'",200
+    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:"+os.environ.get('PORT', 5000)+"/data with your file in forma-data with key='input'",200
 
 if __name__ == '__main__':
     #heroku doesnt allow binding of ports it ppicks it automatically from the env and sets it
