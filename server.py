@@ -1,4 +1,5 @@
 import re
+import os
 from emoji import UNICODE_EMOJI
 import emoji
 import regex
@@ -168,5 +169,6 @@ def wrongway():
     return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:5000/data with your file in forma-data with key='input'",200
 
 if __name__ == '__main__':
+    #heroku doesnt allow binding of ports it ppicks it automatically from the env and sets it
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
