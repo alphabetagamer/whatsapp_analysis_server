@@ -165,7 +165,7 @@ def recieve():
         return "Error Wrong file format",500
 @app.route('/',methods=['GET'])
 def wrongway():
-    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:5000/data with your file in forma-data with key input",200
+    return "HEY IF YOURE LOOKING FOR THE WHATSAPP DATA USE https://whatsapp-analyze.herokuapp.com:5000/data with your file in forma-data with key='input'",200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
