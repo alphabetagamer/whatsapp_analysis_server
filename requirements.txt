@@ -4,7 +4,7 @@
 Flask == 2.3.2
 
 # C:\Users\lokin\OneDrive\Desktop\WHATSAPP\gitlab\whatsapp_analysis_server\server.py: 16
-Werkzeug == 2.2.3
+Werkzeug == 3.0.3
 
 # C:\Users\lokin\OneDrive\Desktop\WHATSAPP\gitlab\whatsapp_analysis_server\server.py: 3,4
 emoji == 0.5.4
