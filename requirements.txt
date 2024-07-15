@@ -13,5 +13,5 @@ emoji == 0.5.4
 regex == 2020.6.8
 
 # C:\Users\lokin\OneDrive\Desktop\WHATSAPP\gitlab\whatsapp_analysis_server\server.py: 7
-setuptools == 65.5.1
+setuptools == 70.0.0
 
